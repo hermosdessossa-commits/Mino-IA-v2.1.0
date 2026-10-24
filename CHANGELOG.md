@@ -26,6 +26,8 @@ Versionnement [SemVer](https://semver.org/lang/fr/).
   Actions, Dockerfile, Makefile et fichiers de dépendances séparés.
 - Documentation : README réécrit, `SECURITY.md`, `CHANGELOG.md`, `LICENSE`,
   `.env.example`.
+- Notebook Colab/Kaggle pour le fine-tuning LoRA de Mistral 7B, avec modes
+  `smoke`/`full`, export propre de l'adaptateur et vérification optionnelle.
 
 ### Modifié
 

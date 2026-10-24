@@ -14,6 +14,7 @@ Moteur de conseil génétique **déterministe** pour 12 maladies héréditaires,
 | `api/` | API Flask, validation Pydantic, licences, rédaction LLM optionnelle | Flask, Pydantic |
 | `scripts/` | Génération et validation du dataset synthétique | `core/` |
 | `training/` | Fine-tuning LoRA du modèle de rédaction | PyTorch, Transformers, PEFT |
+| `notebooks/` | Notebook de fine-tuning GPU pour Colab/Kaggle | GPU, PyTorch |
 | `tests/` | 114 tests unitaires et d'intégration | pytest |
 
 **Règle d'architecture :** `core.genetics.predict()` est l'unique source de vérité pour `probabilite`, `statut`, `methode` et `distribution`. L'API appelle toujours ce moteur en premier. Le LLM, s'il est activé, reçoit les faits déjà calculés et se contente de reformuler le rapport et les recommandations.
@@ -271,6 +272,18 @@ MINO_USE_LLM=1 gunicorn --bind 0.0.0.0:8000 --workers 1 --timeout 120 wsgi:app
 ```
 
 L'adaptateur est cherché dans `model/lora-adapter/`. Le prompt est masqué dans la loss (`-100`), le padding est dynamique, et l'évaluation calcule MAE, RMSE, accuracy, sensibilité, spécificité et AUROC, avec une baseline « toujours 0 % ». Toute sortie LLM non JSON, trop courte ou incohérente est ignorée : l'API renvoie alors le rapport déterministe.
+
+### Fine-tuning sur GPU (Colab/Kaggle)
+
+Un notebook prêt à exécuter automatise l'installation, la validation du dataset, le choix entre un mode `smoke` rapide et un mode `full`, l'entraînement LoRA 4 bits, l'évaluation et l'export de l'adaptateur :
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hermosdessossa-commits/Mino-IA-v2.1.0/blob/main/notebooks/finetuning_lora_colab_kaggle.ipynb)
+
+- **T4 16 Go** : mode `smoke`, ou `full` avec `MAX_SEQ_LENGTH=1024` ;
+- **A100 40 Go** : mode `full` confortable en 2 048 tokens ;
+- **Kaggle** : importer `notebooks/finetuning_lora_colab_kaggle.ipynb` depuis GitHub.
+
+Voir [`notebooks/README.md`](notebooks/README.md) pour les prérequis, les durées indicatives et le dépannage.
 
 ## 7. Tests et qualité
 
