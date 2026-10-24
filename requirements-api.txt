@@ -1,0 +1,4 @@
+# API déterministe : Flask, Pydantic et serveur WSGI.
+flask>=3.1,<4
+pydantic>=2.7,<3
+gunicorn>=22,<24

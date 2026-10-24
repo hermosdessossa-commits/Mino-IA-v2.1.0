@@ -1,0 +1,75 @@
+# Licence propriétaire Mino-IA
+
+Copyright (c) 2026 Mino-IA. Tous droits réservés.
+
+Ce logiciel, ses sources, sa documentation, ses modèles et ses jeux de données
+sont la propriété de l'éditeur de Mino-IA. Ils sont protégés par les lois
+applicables en matière de propriété intellectuelle.
+
+## 1. Droits accordés
+
+Sous réserve du respect de la présente licence et, le cas échéant, d'un contrat
+signé avec l'éditeur, l'éditeur accorde au licencié un droit non exclusif,
+non transférable et révocable de :
+
+- installer et exécuter le logiciel sur les machines autorisées par sa clé de
+  licence ;
+- l'utiliser à des fins d'évaluation, de recherche ou d'usage interne ;
+- consulter et modifier les sources dans le cadre de son usage interne, sans
+  droit de redistribution.
+
+Le nombre de machines, la durée et le type d'usage sont définis par la clé de
+licence et, le cas échéant, par le contrat associé.
+
+## 2. Restrictions
+
+Sauf autorisation écrite préalable de l'éditeur, il est interdit de :
+
+- redistribuer, publier, vendre, louer, sous-licencier ou mettre à disposition
+  le logiciel, en tout ou partie, sous quelque forme que ce soit ;
+- intégrer le logiciel dans un produit ou service commercial destiné à des
+  tiers ;
+- contourner, désactiver ou modifier le mécanisme de licence ;
+- retirer les mentions de copyright, de licence ou l'avertissement médical ;
+- utiliser le logiciel comme dispositif médical certifié, comme substitut à un
+  diagnostic ou à un test génétique validé, sans validation clinique et
+  réglementaire explicite.
+
+## 3. Données et vie privée
+
+Le licencié est seul responsable des données qu'il soumet au logiciel. Il doit
+disposer des bases légales nécessaires et respecter la réglementation applicable
+en matière de données de santé. L'éditeur ne reçoit aucune donnée patient par
+défaut : l'API fonctionne localement, sans appel réseau externe.
+
+## 4. Absence de garantie
+
+LE LOGICIEL EST FOURNI « EN L'ÉTAT », SANS GARANTIE D'AUCUNE SORTE, EXPRESSE OU
+IMPLICITE, Y COMPRIS SANS GARANTIE DE QUALITÉ MARCHANDE, D'ADÉQUATION À UN USAGE
+PARTICULIER OU D'ABSENCE DE CONTREFAÇON. LES RÉSULTATS SONT DES ESTIMATIONS
+STATISTIQUES ET NE CONSTITUENT PAS UN AVIS MÉDICAL.
+
+## 5. Limitation de responsabilité
+
+DANS LA MESURE PERMISE PAR LA LOI, L'ÉDITEUR NE POURRA ÊTRE TENU RESPONSABLE
+D'AUCUN DOMMAGE DIRECT, INDIRECT, ACCESSOIRE, SPÉCIAL OU CONSÉCUTIF, NI D'AUCUNE
+PERTE DE DONNÉES, DE CHIFFRE D'AFFAIRES OU DE CLIENTÈLE, RÉSULTANT DE
+L'UTILISATION OU DE L'IMPOSSIBILITÉ D'UTILISER LE LOGICIEL.
+
+## 6. Résiliation
+
+La licence prend fin automatiquement en cas de violation de ses termes. Le
+licencié doit alors cesser toute utilisation et détruire les copies en sa
+possession. Les clauses relatives à la propriété intellectuelle, à l'absence de
+garantie et à la limitation de responsabilité survivent à la résiliation.
+
+## 7. Droit applicable
+
+La présente licence est régie par le droit applicable au siège de l'éditeur.
+Tout litige relève des juridictions compétentes de ce siège, sauf disposition
+impérative contraire.
+
+## 8. Contact
+
+Pour toute demande de licence commerciale, d'évaluation ou d'autorisation
+spécifique, contactez le mainteneur du dépôt Mino-IA.

@@ -1,0 +1,8 @@
+* text=auto eol=lf
+
+*.safetensors binary
+*.pt binary
+*.pth binary
+*.bin binary
+
+data/*.csv linguist-generated=true
