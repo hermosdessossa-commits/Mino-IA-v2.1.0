@@ -73,6 +73,10 @@ Pour récupérer le modèle fusionné :
 - **archive ZIP** : activer `ZIP_MERGED_MODEL` ;
 - **Google Drive** : à éviter avec un compte gratuit (15 Go au total).
 
+Pour servir le modèle fusionné avec Mino-IA, pointer `MINO_MODEL` vers le dossier
+exporté. Si `model/lora-adapter/` contient encore l'adaptateur, le retirer ou le
+renommer : sinon il serait appliqué une seconde fois.
+
 Le modèle fusionné reste soumis à la licence du modèle de base.
 
 ### Sécurité
