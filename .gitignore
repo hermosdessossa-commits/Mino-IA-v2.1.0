@@ -41,6 +41,8 @@ model/*
 !model/.gitkeep
 mino-ia-lora-adapter/
 mino-ia-lora-adapter.zip
+mino-ia-mistral-7b-merged/
+mino-ia-mistral-7b-merged.zip
 *.log
 *.sqlite
 *.db

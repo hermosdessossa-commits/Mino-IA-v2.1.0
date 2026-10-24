@@ -17,7 +17,8 @@ Ce notebook automatise :
 7. l'évaluation sur le jeu de test ;
 8. l'export propre de l'adaptateur, sans checkpoints d'entraînement ;
 9. la copie vers Google Drive ou `/kaggle/working` ;
-10. une vérification optionnelle de rechargement de l'adaptateur.
+10. l'export optionnel d'un modèle fusionné autonome ;
+11. une vérification optionnelle de rechargement de l'adaptateur.
 
 ### Ouvrir le notebook
 
@@ -37,9 +38,9 @@ Le mode `smoke` (200 paires, 1 époque) sert à vérifier la chaîne. Le mode
 sérieuse. Sur Colab gratuit, le mode `full` peut dépasser la durée de session ;
 préférer Colab Pro/A100 ou Kaggle.
 
-### Sortie
+### Sortie : adaptateur LoRA
 
-Le notebook exporte uniquement :
+Le notebook exporte par défaut :
 
 - `adapter_config.json`
 - `adapter_model.safetensors`
@@ -48,6 +49,31 @@ Le notebook exporte uniquement :
 
 Les checkpoints (`optimizer.pt`, `rng_state.pth`, etc.) restent dans
 `model/lora-adapter/` et ne sont pas inclus dans l'archive.
+
+### Modèle fusionné (optionnel)
+
+La cellule 10 peut fusionner l'adaptateur avec Mistral 7B et sauvegarder un
+modèle autonome d'environ **14,5 Go**. L'adaptateur reste recommandé pour
+l'usage courant : il est beaucoup plus léger.
+
+| Ressource | Minimum |
+|-----------|---------|
+| VRAM GPU | 20 Go (A100 40 Go, L4 24 Go) |
+| ou RAM système | 24 Go (Colab high-RAM, Kaggle) |
+| Disque libre | 18 Go (34 Go avec archive ZIP) |
+
+Sur un Colab T4 standard (16 Go de VRAM, 12,7 Go de RAM), la fusion n'est pas
+possible : conserver l'adaptateur. Sur Kaggle, elle se fait sur CPU avec environ
+30 Go de RAM ; c'est lent mais fonctionnel.
+
+Pour récupérer le modèle fusionné :
+
+- **Hugging Face Hub** (recommandé) : activer `PUSH_MERGED_TO_HUB` et renseigner
+  un dépôt privé dans `HUB_REPO_ID` ;
+- **archive ZIP** : activer `ZIP_MERGED_MODEL` ;
+- **Google Drive** : à éviter avec un compte gratuit (15 Go au total).
+
+Le modèle fusionné reste soumis à la licence du modèle de base.
 
 ### Sécurité
 

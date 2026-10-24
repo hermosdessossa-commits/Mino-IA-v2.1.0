@@ -27,7 +27,8 @@ Versionnement [SemVer](https://semver.org/lang/fr/).
 - Documentation : README réécrit, `SECURITY.md`, `CHANGELOG.md`, `LICENSE`,
   `.env.example`.
 - Notebook Colab/Kaggle pour le fine-tuning LoRA de Mistral 7B, avec modes
-  `smoke`/`full`, export propre de l'adaptateur et vérification optionnelle.
+  `smoke`/`full`, export propre de l'adaptateur, export optionnel d'un modèle
+  fusionné et vérification optionnelle.
 
 ### Modifié
 

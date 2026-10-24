@@ -283,6 +283,8 @@ Un notebook prêt à exécuter automatise l'installation, la validation du datas
 - **A100 40 Go** : mode `full` confortable en 2 048 tokens ;
 - **Kaggle** : importer `notebooks/finetuning_lora_colab_kaggle.ipynb` depuis GitHub.
 
+La cellule 10 peut aussi fusionner l'adaptateur avec Mistral 7B pour produire un modèle autonome d'environ 14,5 Go, exportable vers Hugging Face Hub ou en archive ZIP. Cette étape exige un GPU de 20 Go+, ou au moins 24 Go de RAM pour une fusion sur CPU.
+
 Voir [`notebooks/README.md`](notebooks/README.md) pour les prérequis, les durées indicatives et le dépannage.
 
 ## 7. Tests et qualité
